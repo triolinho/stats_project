@@ -56,3 +56,7 @@ violation_df = violation_df[violation_df['CRIME']=='TOTAL VIOLATION OFFENSES']
 # other_felony_df = other_felony_df.set_index('PCT')
 # misdemeanor_df = misdemeanor_df.set_index('PCT')
 # violation_df = violation_df.set_index('PCT')
+
+#add df for median rent
+rent_df = pd.read_csv("median_rent.csv")
+rent_df.head()
