@@ -60,3 +60,56 @@ violation_df = violation_df[violation_df['CRIME']=='TOTAL VIOLATION OFFENSES']
 #add df for median rent
 rent_df = pd.read_csv("median_rent.csv")
 rent_df.head()
+rent_df = rent_df.dropna() #drop null values
+
+#create new dataframe for average median rent for the year
+mean_rent_df = rent_df.filter(['areaName', 'Borough', 'areaType'])
+
+df2010 = rent_df.filter(['2010-01', '2010-02', '2010-03',
+                        '2010-04', '2010-05', '2010-06', '2010-07', '2010-08', '2010-09', '2010-10',
+                         '2010-11', '2010-12'])
+
+series2010 = df2010.mean(axis = 1, skipna = True)
+
+### repeat this step for each year ###
+
+mean_rent_df['Year 2010'] = series2010
+mean_rent_df['Year 2011'] = series2011
+mean_rent_df['Year 2012'] = series2012
+mean_rent_df['Year 2013'] = series2013
+mean_rent_df['Year 2014'] = series2014
+mean_rent_df['Year 2015'] = series2015
+mean_rent_df['Year 2016'] = series2016
+mean_rent_df['Year 2017'] = series2017
+mean_rent_df['Year 2018'] = series2018
+
+#getting zip codes for neighborhoods
+
+page = requests.get("https://www.health.ny.gov/statistics/cancer/registry/appendix/neighborhoods.htm")
+page
+
+table = html.find("table")
+rows = table.findAll('tr')
+zipdata = [[td.findChildren(text=True) for td in tr.findAll("td")] for tr in rows]
+
+for item in zipdata:
+    if len(item) == 2:
+        item.insert(0, None)
+zipdata
+
+zipdf = pd.DataFrame(zipdata)
+zipdf[0].fillna( method ='ffill', inplace = True)
+
+zipdf.columns = ['Borough', 'Neighborhood', 'Zip Code(s)']
+
+## creating zip code dataframe
+
+zipdf = zipdf.dropna()
+zipdf['Borough'] = zipdf['Borough'].str[0]
+zipdf['Neighborhood'] = zipdf['Neighborhood'].str[0]
+zipdf['Zip Code(s)'] = zipdf['Zip Code(s)'].str[0]
+zipdf
+
+## getting rid of everything outside of manhattan
+zipdf = zipdf[zipdf['Borough'] == 'Manhattan']
+zipdf
