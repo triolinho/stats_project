@@ -113,3 +113,13 @@ zipdf
 ## getting rid of everything outside of manhattan
 zipdf = zipdf[zipdf['Borough'] == 'Manhattan']
 zipdf
+
+#narrowing down rent values to neighborhoods only
+manhattan_df = manhattandf[manhattandf['areaType'] == 'neighborhood']
+
+## change column names for crime dataframes
+violation_df.columns = ('PCT', 'CRIME', 'y2000', 'y2001', 'y2002', 'y2003', 'y2004',
+                        'y2005', 'y2006', 'y2007', 'y2008', 'y2009', 'y2010', 'y2011',
+                         'y2012', 'y2013', 'y2014', 'y2015', 'y2016', 'y2017', 'y2018')
+
+### do this for each dataframe 
