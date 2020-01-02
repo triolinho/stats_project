@@ -171,3 +171,35 @@ new_new_fp.head(20)
 felony_film_df = pd.merge(new_new_new, new_new_fp, left_on='PCT', right_on='policeprecinct_s')
 
 ### repeat for each crime DataFrame
+
+## find pearson correlation for each crime stat and amount of film permits
+felony_film_df.corr(method='pearson')
+other_felony_film_df.corr(method='pearson')
+misdemeanor_film_df.corr(method='pearson')
+violation_film_df.corr(method='pearson')
+
+##create lists for ttest
+felony_list = felony_df.values.tolist()
+top_felony_list1 = felony_list[0]
+top_felony_list2 = felony_list[9]
+
+print(top_felony_list1.pop(0))
+top_felony1 = list(map(int, top_felony_list1))
+
+## do same for other list
+
+from scipy.stats import ttest_ind
+import numpy as np
+ttest_ind(top_felony1, top_felony2)
+##Ttest_indResult(statistic=-4.1841688359582925, pvalue=0.00017552099421652955)
+​
+###repeat for each crime DataFrame
+
+### scatter plot for crimes/film permits
+fig, ax = plt.subplots(figsize=(10,5))
+sns.scatterplot(felony_film_df['sum'], felony_film_df['total_permits'], s=200)
+plt.xlabel('Total Felonies from 2016-2018')
+plt.ylabel('Total Film Permits')
+plt.show()
+
+##repeat for each crime 
