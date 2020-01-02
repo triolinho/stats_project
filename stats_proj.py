@@ -133,3 +133,41 @@ rent_zip_codes = ['10280', '10026', '10019', '10001', '10038', '10029', '10003',
                  '10014', '10031', '10034', '10013', '10002', '10017', '10022', '10018', '10025', '10044',
                  '10012', '10007', '10128', '10023', '10032', '10011']
 manhattan_df.insert(2, 'Zip_Code', rent_zip_codes)
+
+### add brittany's data to notebook
+
+film_permits_df = pd.read_csv(r'manhattan_film_permit_results_df')
+value_zip_code_df = pd.read_csv(r'mean_value_by_zipcode')
+permits_by_zip_df = pd.read_csv(r'permits_per_zip_df')
+### isolate film permits to shooting permits only
+film_permits_df = film_permits_df[film_permits_df['eventtype'] == 'Shooting Permit']
+
+
+##merge dataframes
+
+new_felony_df_stats_only= felony_df_stats_only.drop('CRIME', axis=1)
+new_felony_df_stats_only.head()
+
+new_new = new_felony_df_stats_only.filter(['y2016', 'y2017', 'y2018'])
+new_new.head()
+
+new_new['sum'] = new_new.sum(axis=1)
+new_new.head()
+
+## get total permits for each precinct
+
+new_fp['total_permits'] = new_fp.groupby('policeprecinct_s')['policeprecinct_s'].transform('count')
+new_fp.head(50)
+
+new_fp = new_fp.filter(['policeprecinct_s', 'total_permits'])
+
+## drop duplicates
+
+new_new_fp =new_fp.drop_duplicates('policeprecinct_s')
+new_new_fp.head(20)
+
+## finally merge dataframes
+
+felony_film_df = pd.merge(new_new_new, new_new_fp, left_on='PCT', right_on='policeprecinct_s')
+
+### repeat for each crime DataFrame
