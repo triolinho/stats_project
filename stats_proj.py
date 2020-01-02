@@ -202,4 +202,24 @@ plt.xlabel('Total Felonies from 2016-2018')
 plt.ylabel('Total Film Permits')
 plt.show()
 
-##repeat for each crime 
+##repeat for each crime
+
+## make normal distribution graphs for crimes in top film permit precincts
+
+#top_violationa = list(map(int, top_violation1))
+std1 = np.std(top_violationa)
+mean1 = np.mean(top_violationa)
+fit1 = stats.norm.pdf(top_violationa, mean1, std1)
+
+#top_violationb = list(map(int, top_violation2))
+std2 = np.std(top_violationb)
+mean2 = np.mean(top_violationb)
+fit2 = stats.norm.pdf(top_violationb, mean2, std2)
+
+plt.title('Violation Arrests for Precincts with Most Film Permits')
+plt.plot(top_violationa,fit1)
+plt.plot(top_violationb,fit2)
+#pl.hist(top_violationa,normed=True)
+plt.show()
+
+## repeat for each crime
