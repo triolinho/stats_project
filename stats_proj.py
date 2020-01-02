@@ -122,4 +122,14 @@ violation_df.columns = ('PCT', 'CRIME', 'y2000', 'y2001', 'y2002', 'y2003', 'y20
                         'y2005', 'y2006', 'y2007', 'y2008', 'y2009', 'y2010', 'y2011',
                          'y2012', 'y2013', 'y2014', 'y2015', 'y2016', 'y2017', 'y2018')
 
-### do this for each dataframe 
+### do this for each dataframe
+
+## drop duplicate from rent df
+manhattan_df = manhattan_df.drop([131, 120])
+
+## create column for zip codes in rent values DataFrame
+
+rent_zip_codes = ['10280', '10026', '10019', '10001', '10038', '10029', '10003', '10005', '10010', '10016',
+                 '10014', '10031', '10034', '10013', '10002', '10017', '10022', '10018', '10025', '10044',
+                 '10012', '10007', '10128', '10023', '10032', '10011']
+manhattan_df.insert(2, 'Zip_Code', rent_zip_codes)
