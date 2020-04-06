@@ -10,7 +10,7 @@ Who would this benefit?
 
 2) Property Owners: Will your your property value increase if more media is produced in your area?
 
-3)Communities where films are made: Are crimes more common in areas that are filmed in more frequently?
+3) Communities where films are made: Are crimes more common in areas that are filmed in more frequently?
 
 Data Processing
 -
