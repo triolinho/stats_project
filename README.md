@@ -1,6 +1,4 @@
-# stats_project
-
-Comparing NYC Film Locations, Real Estate Prices, and Crime Rates
+#Comparing NYC Film Locations, Real Estate Prices, and Crime Rates
 -
 
 Goal
