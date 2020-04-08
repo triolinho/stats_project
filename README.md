@@ -1,6 +1,6 @@
 Comparing NYC Film Locations, Real Estate Prices, and Crime Rates
 -
-Data source: NYC Open Data
+Data source: ![NYC Open Data](https://data.cityofnewyork.us/
   - Film Permits
     - Aggregated by zipcode and police precinct
   - Citywide Crime Statistics
@@ -24,6 +24,8 @@ This exploration could help to incentivize media companies to film in Manhattan 
 Statistical Testing
 -
 Compare arrests in the two most popular film locations using a two-sample t-test to see if the average number of felonies in each film location is significantly different.
+
+<img src = "images/most_precincts.png"> 
 
 - H(a): You can use past crime statistics to determine which area will have more crime.
 
