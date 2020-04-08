@@ -46,6 +46,10 @@ Result: We can reject the null hypothesis for each type of crime.
 <img src = "images/felony_correlation.png"> 
 <img src = "images/other_felonies_correlation.png"> 
 
+- p-value = 0.0002
+- In each case the absolute value of the r-coefficient was between 0.15 and 0.30, showing little correlation.
+
+Result: Fail to Reject the null hypothesis.
 
 Conclusions
 -
