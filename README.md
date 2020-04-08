@@ -23,6 +23,16 @@ This exploration could help to incentivize media companies to film in Manhattan 
 
 Statistical Testing
 -
+- Compare arrests in the two most popular film locations using a two-sample t-test to see if the average number of felonies in each film location is significantly different.
+
+H(a): You can use past crime statistics to determine which area will have more crime.
+
+H(0): Past years' crime statistics cannot be used to predict future crime rates in one area over another
+
+Alpha = 0.05
+p-value = 0.0001 for major felonies, even lower for all other major crimes
+
+Result: We can reject the null hypothesis for each type of crime. 
 
 Conclusions
 -
