@@ -21,12 +21,6 @@ Who would this benefit?
 
 This exploration could help to incentivize media companies to film in Manhattan while generating economic value for property owners while reducing instances of crime.
 
-Data Processing
--
-
-EDA
--
-
 Statistical Testing
 -
 
