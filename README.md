@@ -1,6 +1,6 @@
 Comparing NYC Film Locations, Real Estate Prices, and Crime Rates
 -
-Data source: ![NYC Open Data](https://data.cityofnewyork.us/
+Data source: ![NYC Open Data](https://data.cityofnewyork.us/)
   - Film Permits
     - Aggregated by zipcode and police precinct
   - Citywide Crime Statistics
