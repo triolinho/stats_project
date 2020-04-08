@@ -41,7 +41,7 @@ Result: We can reject the null hypothesis for each type of crime.
 - H(0): There is no relationship between crime rates and filming frequency.
 
   - Test: Pearson correlation
-<img src = "images/total_violations_correlations.png"> 
+<img src = "images/total_violations_correlation.png"> 
 <img src = "images/misdemeanor_correlation.png">
 <img src = "images/felony_correlation.png"> 
 <img src = "images/other_felonies_correlation.png"> 
