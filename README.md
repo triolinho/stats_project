@@ -53,6 +53,11 @@ Result: Fail to Reject the null hypothesis.
 
 Conclusions
 -
+- There is a significant difference in the instances of crime between two popular film locations
+
+- There is no significant difference in the number of permits issues based on crime
+
+- Property values are not correlated with the popularity of film locations
 
 Further Exploration
 -
