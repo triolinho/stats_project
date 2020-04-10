@@ -51,6 +51,18 @@ Result: We can reject the null hypothesis for each type of crime.
 
 Result: Fail to Reject the null hypothesis.
 
+3) Filming near high-value properties
+- H(a): Areas with higher property values are filmed more frequently.
+- H(0): There is no relationship between property value and film permits issued
+
+  - Test: Pearson Correlation
+<img src = "images/permits_prop_value.png"> 
+
+- R = 0.184 (low correlation)
+- Confidence Interval = 95%
+
+Result: Fail to reject the null hypothesis
+
 Conclusions
 -
 - There is a significant difference in the instances of crime between two popular film locations
