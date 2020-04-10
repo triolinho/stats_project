@@ -61,3 +61,7 @@ Conclusions
 
 Further Exploration
 -
+- Does filming impact public safety?
+- What are other indicators that impact public safety and property values?
+- Is there a relationship between property value and arrests?
+- Use rent data to test for relationships between filming and rent prices
